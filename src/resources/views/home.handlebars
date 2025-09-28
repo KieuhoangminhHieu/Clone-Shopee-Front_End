@@ -1,1 +1,50 @@
-<h1>Xin chào từ Handlebars!</h1>
+<!-- home.handlebars -->
+
+<div class="homepage-container">
+    <!-- 🔍 Header -->
+    <header class="header">
+        <div class="search-bar">
+            <input type="text" placeholder="Siêu Nhanh Siêu Rẻ" />
+            <button>Tìm kiếm</button>
+        </div>
+        <div class="user-actions">
+            <a href="/notifications">Thông báo</a>
+            <a href="/support">Hỗ trợ</a>
+            <a href="/cart">Giỏ hàng</a>
+        </div>
+    </header>
+
+    <!-- 🎉 Banner -->
+    <section class="main-banner">
+        <img src="/images/banner-1010.jpg" alt="Khuyến mãi 10.10" />
+        <div class="banner-text">
+            <h2>Cuối Tuần Giải Trí</h2>
+            <p>Giảm đến 250.000đ & FREESHIP 0Đ</p>
+        </div>
+    </section>
+
+    <!-- 🔥 Tính năng nổi bật -->
+    <section class="features">
+        <ul class="feature-list">
+            <li><a href="/deal-1010">Deal 10.10</a></li>
+            <li><a href="/international">Hàng Quốc Tế</a></li>
+            <li><a href="/shopee-xu">Shopee Xu</a></li>
+            <li><a href="/voucher-style">Voucher 3 Tỷ</a></li>
+            <li><a href="/cheap-everything">Gì Cũng Rẻ</a></li>
+            <li><a href="/brands-sale">Hàng Hiệu Giảm 50%</a></li>
+        </ul>
+    </section>
+
+    <!-- 🗂️ Danh mục sản phẩm -->
+    <section class="categories">
+        <h3>DANH MỤC</h3>
+        <div class="category-grid">
+            {{#each categories}}
+            <div class="category-item">
+                <img src="{{this.icon}}" alt="{{this.name}}" />
+                <p>{{this.name}}</p>
+            </div>
+            {{/each}}
+        </div>
+    </section>
+</div>
